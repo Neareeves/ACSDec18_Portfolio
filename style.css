@@ -1,0 +1,55 @@
+/***********general**************/
+body * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+@font-face{
+	font-family: 'maven';
+	src: url('fonts/MavenPro-Regular.ttf');
+}
+@font-face{
+	font-family: 'maven medium';
+	src: url('fonts/MavenPro-Medium.ttf');
+}
+@font-face{
+	font-family: 'kumar';
+	src: url('fonts/KumarOneOutline-Regular.ttf');
+}
+/***********navigation**************/
+
+nav ul {
+	display: flex;
+	justify-content: center;
+	align-content: space-around;
+	font-family: 'maven medium';
+	background-color: #1a3163;
+	color: #fab95b;
+	align-items: center;
+}
+nav li {
+padding: 20px;
+list-style-type: none;
+}
+nav img {
+	width: 80px;
+	height: 70px;
+}
+nav li:hover{
+	background-color: #fab95b;
+	color: #1a3163;
+}
+/***************section présentation***************/
+#presentation {
+	background-color: #f9dec9;
+}
+.presentation {
+	width: 70%;
+}
+/***************section derniersprojets***************/
+#derniersprojets {
+	background-color: #f5574e;
+}
+.derniersprojets {
+	width: 70%;
+}
