@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleth Arrias, web developper</title>
+  <style type="text/css">
+  body {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #263238;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    vertical-align: center;
+  }
+
+
+
+  /* CM SPINNER */
+  .cm-spinner {
+    height: 150px;
+    width: 150px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-top: 4px solid #f15e41;
+    -webkit-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+    position: relative;
+  }
+
+  .cm-spinner::before,
+  .cm-spinner::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+  }
+
+  .cm-spinner::before {
+    border-top-color: #bad375;
+    -webkit-animation: 3s spin linear infinite;
+    animation: 3s spin linear infinite;
+  }
+
+  .cm-spinner::after {
+    border-top-color: #26a9e0;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+  }
+
+  .spinner-7 {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    background: transparent;
+    border-top: 4px solid #fff;
+    border-right: 4px solid transparent;
+    border-radius: 50%;
+    -webkit-animation: 1s spin linear infinite;
+    animation: 1s spinBorder linear infinite;
+  }
+
+
+  -webkit-@keyframes spin {
+    -webkit-from {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    -webkit-to {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+
+  @-webkit-keyframes spinBorder {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      border-width: 15px;
+    }
+    50% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      border-width: 3px;
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+      border-width: 15px;
+    }
+  }
+
+  @keyframes spinBorder {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      border-width: 15px;
+    }
+    50% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      border-width: 3px;
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+      border-width: 15px;
+    }
+  }
+
+
+  @media only screen and (max-width: 968px) {
+    .flexbox > div {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.3333333%;
+      flex: 0 0 33.3333333%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .flexbox > div {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+    }
+  }
+
+  @media only screen and (max-width: 568px) {
+    .flexbox > div {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+    }
+  }
+
+  main {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: #FFF;
+  }
+
+  #spinner {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 157px;
+  }
+  .ar, .ir, .fr {
+    width: 30px;
+    height: 30px;
+  }
+
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+</head>
+<body>
+  <main>
+
+    <h1>Maintenance en cours</h1>
+    <p><img class="fr" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/flags/1x1/fr.svg">   :   Le site est en maintenance et sera remis en ligne dans quelques jours. Je vous remercie pour votre patience!</p>
+    <div id="spinner">
+      <div class="cm-spinner"></div>
+    </div>
+    <p><img class='ir' src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/flags/1x1/ie.svg">   :   I am improving the website. It is coming back soon!</p>
+    <p><img class="ar" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/flags/1x1/ar.svg">   :   Estoy mejorando el website. Volverá dentro de unos dias!</p>
+
+  </main>
+
+
+
+
+</body>
+</html>

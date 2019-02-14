@@ -1,3 +1,17 @@
+
+//SERVICE WORKER
+if ('serviceWorker' in navigator){
+    navigator.serviceWorker
+        .register('./service-worker.js', { scope: './' })
+        .then(function() {
+            console.log("service worker registered");
+        })
+        .catch(function(err){
+            console.log("sw failed", err);
+        })
+}
+
+
  // Mode anglais/français
 
  let languageSwitchInEnglish = document.getElementById('inEnglish');
@@ -34,66 +48,43 @@ function switchIdiomaFR() {
 languageSwitchInFrench.addEventListener('click', switchIdiomaFR);
 
 
-var accueil = new Vue ({
-    el: '#accueil',
 
-    data: {
-        produit: 'bottes',
 
-        details: ['leather','elastane','blablabla'],
-        inventaire: 0,
-        cart:0,
-    },
-    methods: {
-        addToCart: function() {
-            this.cart ++
-        },
+/**************vue.js pour les projaccueilets***/
+
+Vue.directive('scroll', {
+  inserted: function (el, binding) {
+    let f = function (evt) {
+      if (binding.value(evt, el)) {
+        window.removeEventListener('scroll', f);
+      }
     }
+    window.addEventListener('scroll', f);
+  }
+});
+let repere = document.getElementById('testscroll');
+let bodoff=document.body.clientHeight;
+let fenoff=document.documentElement.clientHeight;
+// console.log(document.body.clientHeight);
+// main app
+new Vue({
+  el: '#app',
+  methods: {
+    handleScroll: function (evt, el) {
 
+
+      if (window.scrollY > (document.body.clientHeight-document.documentElement.clientHeight-30)) {
+        el.setAttribute(
+          'style',
+          'opacity: 1; transform: translate3d(0px, 30px, 10px)'
+        )
+
+      }
+      
+    }
+  }
 })
 
-
-//modals************************************************
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-} 
-
-//   var app = new Vue ({
-//     el: '#app',
-
-//     data: {
-//         produit: 'bottes',
-//         image: 'fond_jungle3.jpg',
-//         details: ['leather','elastane','blablabla'],
-//         inventaire: 0,
-//         cart:0,
-//     },
-//     methods: {
-//         addToCart: function() {
-//             this.cart ++
-//         },
-// }
-
-// })
+// document.documentElement.clientHeight : hauteur de la fenêtre
+// document.body.clientHeight : semble être la hauteur du body
+// app.offsetHeight: hauteur de la div#app

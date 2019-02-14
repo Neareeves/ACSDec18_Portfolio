@@ -1,6 +1,6 @@
 <?php
 
-
+ini_set('display_errors',1);
 if(isset($_GET['page']) && !empty($_GET['page'])) {
     $page = $_GET['page'];
 }
