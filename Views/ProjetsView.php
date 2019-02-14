@@ -1,5 +1,5 @@
 <?php include('Views/HeadView.php')?>
-
+<main id="main">
 <div class="francais">
 	<div id="projets">
 		<div class="projets">
@@ -491,6 +491,8 @@
 
 <!-- <img src="Images/strw2.jpg">
 -->
-<?php include('Views/ContactView.php');
+<?php include('Views/ContactView.php');?>
+</main>
+<?php
 include('Views/FooterView.php')?>
 <script type="text/javascript" src="scriptprojets.js"></script>

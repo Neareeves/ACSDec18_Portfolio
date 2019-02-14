@@ -191,7 +191,7 @@
 
 
 
-	</main>
+	
 
 	<script type="text/javascript">
 		//modals************************************************
@@ -308,5 +308,7 @@ function show2Slides(n) {
 		} 
 
 	</script>
-	<?php include('Views/ContactView.php');
+	<?php include('Views/ContactView.php');?>
+</main>
+	<?php
 	include('Views/FooterView.php')?>

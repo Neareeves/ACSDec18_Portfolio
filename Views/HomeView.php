@@ -1,4 +1,5 @@
 <?php include('Views/HeadView.php')?>
+<main id="main" class="homebody">
 <div id="home">
   
 <div id="svgHome">
@@ -13,13 +14,14 @@
    viewBox="0 0 1200 720" 
    enable-background="new 0 0 1200 720" xml:space="preserve">
 <g id="fond">
-  <rect class="coucou" x="156.113" y="258.091" fill="#F9B85B" width="910.455" height="218.989" />
+  <rect class="coucou" x="156.113" y="100" fill="#F9B85B" width="910.455" height="487.989" />
 </g>
 <g id="boule">
-  <circle class="image" v-show="showImage" :style="{ left: page.left + 'px', top: page.top + 'px' }" fill="#6d7993" cx="690.836" cy="386.334" r="128.243"/>
+  <circle class="image" v-show="showImage" :style="{ left: page.left + 'px', top: page.top + 'px' }" fill="#c83737" cx="690.836" cy="386.334" r="128.243"
+  />
 </g>
 <g id="imagee">
-  <image  overflow="visible" width="1200" height="720" xlink:href="truc.png" >
+  <image  overflow="visible" width="1200" height="720"  xlink:href="Images/fond2.png" >
   </image>
 </g>
 </div>
@@ -29,7 +31,7 @@
 
 </div>
 
-
+</main>
 <script type="text/javascript">
 	let homeSvg = document.getElementById('homeSvg');
 let boule = document.getElementById('boule');

@@ -15,7 +15,6 @@
 </head>
 <body>
 
-
   <!-- <div style="font-size:30px;cursor:pointer"> -->
 
     <div class="container" id="containBurger">
@@ -39,7 +38,7 @@
   <a href="#">Services</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a> -->
-  <span class="icone"><a href="?page=home"><img src="logoaac.png"></a></span>
+  <span class="icone"><a href="?page=home"><img class="logop" src="Images/logoperso.png"></a></span>
   <span class='francais icone'><a href="?page=accueil"><i class="fas fa-user-circle"></i></a></span>
   <span class='anglais icone'><a href="?page=accueil"><i class="fas fa-user-circle"></i></a></span>
 
@@ -49,8 +48,8 @@
   <span class='anglais icone'><a href="Images/resume.pdf"><i class="fas fa-address-card"></i>
   </a></span>
   <span class="icone"><a href="?page=accueil#contact"><i class="fas fa-file-signature"></i></a></span>
-  <span id="inEnglish"  class="francais icone"><img id="inEnglish" src="Images/GB.png"></span>
-  <span id="inFrench" class="anglais icone"><img src="Images/FR.png"></span>
+  <span id="inEnglish"  class="francais icone"><img class="langue" id="inEnglish" src="Images/GB.png"></span>
+  <span id="inFrench" class="anglais icone"><img class="langue" src="Images/FR.png"></span>
      <!-- </ul>
      </nav> -->
    </div>
@@ -90,25 +89,44 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 //push sidebar
+
+
+
 let swticher =0;
 function openNav() {
 
 }
 
 function closeNav() {
-  console.log(swticher);
+  let largeurWindow = window.innerWidth;
   if (swticher == 1) {
+
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
     document.getElementById("containBurger").style.marginLeft = "0px";
     swticher = 0;
 
-  }else if (swticher == 0) {
+  } else if (swticher == 0) {
+   
+  console.log(largeurWindow);
+    if (largeurWindow > 800){
 
-    document.getElementById("mySidenav").style.width = "180px";
-    document.getElementById("main").style.marginLeft = "180px";
-    document.getElementById("containBurger").style.marginLeft = "200px";
-    swticher = 1;
+
+      document.getElementById("mySidenav").style.width = "180px";
+      document.getElementById("main").style.marginLeft = "180px";
+      document.getElementById("containBurger").style.marginLeft = "175px";
+      swticher = 1;
+    } else if (largeurWindow < 800  && largeurWindow > 576) {
+      document.getElementById("mySidenav").style.width = "150px";
+      document.getElementById("main").style.marginLeft = "150px";
+      document.getElementById("containBurger").style.marginLeft = "148px";
+      swticher = 1;
+    } else if (largeurWindow < 575) {
+      document.getElementById("mySidenav").style.width = "100px";
+      document.getElementById("main").style.marginLeft = "100px";
+      document.getElementById("containBurger").style.marginLeft = "99px";
+      swticher = 1;
+    }
 
   }
 }
@@ -116,5 +134,7 @@ function closeNav() {
 
 //sinon, class open, qui s'enleve ou s'en va au click par une fonction js
 document.getElementById("burger").addEventListener('click',closeNav);
+
+
 
 </script>

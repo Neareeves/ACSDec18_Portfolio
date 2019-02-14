@@ -514,6 +514,10 @@ input[value=Envoyer]:hover {
 
 /***************home*********/
 /***************media queries*********/
+@media all and (min-width: 801px) {
+  .homebody {
+    background-color: #6e7a94;
+    height: 100vh; } }
 @media all and (max-width: 800px) {
   .box {
     width: 80%; }
@@ -566,10 +570,13 @@ input[value=Envoyer]:hover {
     display: none; }
 
   #home {
-    background-image: url("/Images/IMG_5943.jpg");
+    background-image: url("../Images/fondmobile.png");
     background-position-x: 49%;
     height: 100vh;
-    background-size: cover; } }
+    background-size: cover; }
+
+  .homebody {
+    background-color: #FFF; } }
 @media (max-width: 576px) {
   .box {
     width: 95%; }
@@ -660,21 +667,20 @@ input[value=Envoyer]:hover {
     display: none; }
 
   #home {
-    background-image: url("Images/IMG_5943.jpg");
+    background-image: url("../Images/fondmobile.png");
     background-position-x: 49%;
     height: 100vh;
     background-size: cover; }
 
-  #home::after {
-    color: #373737;
-    font-size: 2rem;
-    font-family: righteous;
-    vertical-align: center;
-    content: "Aleth Arrias, web developper";
-    position: absolute;
-    left: 10%;
-    top: 10%; }
-
+  /* #home::after {
+     color: #373737;
+     font-size: 2rem;
+     font-family: righteous;
+     vertical-align: center;
+     content: "Aleth Arrias, web developper";
+     position: absolute;
+     left: 10%;
+     top: 10%; }*/
   .gridauto > * {
     width: 100%;
     margin-bottom: 15px; } }
@@ -852,5 +858,7 @@ input[value=Envoyer]:hover {
   -webkit-transform: scale(1.01);
   transform: scale(1.01);
   will-change: transform; }
+
+/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */

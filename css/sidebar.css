@@ -18,22 +18,24 @@ b {
     Default State
   ====================================
   */ }
-  .container input {
-    display: none; }
-  .container label {
-    position: relative;
-    width: 50px;
-    height: 40px;
-    display: inline;
-    cursor: pointer;
-    transition: all .5s;
-    text-align: left;
-    top: 30px;
-    left: 20px; }
 
-div,
+.container input {
+  display: none; }
+
+.container label {
+  position: relative;
+  width: 50px;
+  height: 40px;
+  display: inline;
+  cursor: pointer;
+  transition: all .5s;
+  text-align: left;
+  top: 30px;
+  left: 20px; }
+
+.container div, .container
 div:before,
-div:after {
+.container div:after {
   background: #fab95b;
   position: absolute;
   height: 5px;
@@ -43,8 +45,10 @@ div:after {
 
 label div:first-child {
   top: 0px; }
+
 label div:nth-child(2) {
   top: 10px; }
+
 label div:nth-child(3) {
   top: 20px; }
 
@@ -54,6 +58,7 @@ label div:nth-child(3) {
 */
 #menu21 + label div {
   left: 0px; }
+
 #menu21 + label div:nth-child(2):before {
   content: "";
   opacity: 0; }
@@ -62,10 +67,12 @@ label div:nth-child(3) {
   top: 10px;
   left: 0px;
   transform: rotate(-45deg); }
+
 #menu21:checked + label div:nth-child(2) {
   top: 10px;
   left: 40px;
   width: 22px; }
+
 #menu21:checked + label div:nth-child(2):before {
   content: "";
   opacity: 1;
@@ -77,6 +84,7 @@ label div:nth-child(3) {
   height: 15px;
   width: 15px;
   top: -7px; }
+
 #menu21:checked + label div:nth-child(3) {
   top: 10px;
   left: 0px;
@@ -89,15 +97,19 @@ label div:nth-child(3) {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #6D7993;
+  background-color: #555555;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  border-right: 3px dotted #fab95b; }
 
-.sidenav > span img {
+.sidenav > span .logop {
+  max-width: 100%; }
+
+.sidenav > span .langue {
   max-width: 96px; }
 
 .sidenav a {
@@ -129,5 +141,6 @@ label div:nth-child(3) {
 
   .sidenav a {
     font-size: 18px; } }
+/*# sourceMappingURL=sidebar.css.map */
 
 /*# sourceMappingURL=sidebar.css.map */

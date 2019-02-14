@@ -5,131 +5,84 @@ Setting up the Pen
 Specific styles below
 
 */
-
-$bg-clr: #fff;
-$icn-clr: #fab95b;
-
-
-
 b {
   position: absolute;
   top: 40px;
   text-align: center;
-  z-index: -1;
-}
-
-
-
+  z-index: -1; }
 
 .container {
   margin-top: 0px;
-  // text-align: center;
 
+  /* 
+    General styles for all menus 
+    Default State
+  ====================================
+  */ }
+  .container input {
+    display: none; }
+  .container label {
+    position: relative;
+    width: 50px;
+    height: 40px;
+    display: inline;
+    cursor: pointer;
+    transition: all .5s;
+    text-align: left;
+    top: 30px;
+    left: 20px; }
 
-/* 
-  General styles for all menus 
-  Default State
-====================================
-*/
-
-input {
-  display: none;
-}
-
-label {
-  position: relative;
-  width: 50px;
-  height: 40px;
-  display: inline;
-  cursor: pointer;
-  // margin: 1.7em;
-  transition: all .5s;
-  text-align: left;
-  top: 30px;
-  left: 20px;
-
-}
-}
-
-div,
+.container div, .container
 div:before,
-div:after {
-  background: $icn-clr;
+.container div:after {
+  background: #fab95b;
   position: absolute;
   height: 5px;
   width: 50px;
   border-radius: 4px;
-  transition: all .5s;
-}
+  transition: all .5s; }
 
-label {
-  div:first-child {
-    top: 0px;
-  }
-  div:nth-child(2) {
-    top: 10px;
-  }
-  div:nth-child(3) {
-    top: 20px;
-  }
-}
-
-
+label div:first-child {
+  top: 0px; }
+label div:nth-child(2) {
+  top: 10px; }
+label div:nth-child(3) {
+  top: 20px; }
 
 /* 
   Specific styles for each menu
 ====================================
 */
+#menu21 + label div {
+  left: 0px; }
+#menu21 + label div:nth-child(2):before {
+  content: "";
+  opacity: 0; }
 
-// The + selector targets the sibling immediately after, in CSS3 the ~ slector can be used to target a sibling later in the html document not just immediately after
-// This CSS will only triger when the label is after a checkbox with an id of menu1 that is checked, if the checkbox is not checked it goes back to the previous default state CSS
-// The animations occur because of the transition property applied above
+#menu21:checked + label div:first-child {
+  top: 10px;
+  left: 0px;
+  transform: rotate(-45deg); }
+#menu21:checked + label div:nth-child(2) {
+  top: 10px;
+  left: 40px;
+  width: 22px; }
+#menu21:checked + label div:nth-child(2):before {
+  content: "";
+  opacity: 1;
+  transform: rotate(45deg);
+  background: none;
+  border-bottom: 5px solid #fab95b;
+  border-left: 5px solid #fab95b;
+  border-radius: 0px;
+  height: 15px;
+  width: 15px;
+  top: -7px; }
+#menu21:checked + label div:nth-child(3) {
+  top: 10px;
+  left: 0px;
+  transform: rotate(45deg); }
 
-
-
-#menu21+label {
-  div {
-    left: 0px;
-  }
-  div:nth-child(2):before {
-    content: "";
-    opacity: 0;
-  }
-}
-
-#menu21:checked+label {
-  div:first-child {
-    top: 10px;
-    left: 0px;
-    transform: rotate(-45deg);
-  }
-  div:nth-child(2) {
-    top: 10px;
-    left: 40px;
-    width: 22px;
-  }
-  div:nth-child(2):before {
-    content: "";
-    opacity: 1;
-    transform: rotate(45deg);
-    background: none;
-    border-bottom: 5px solid $icn-clr;
-    border-left: 5px solid $icn-clr;
-    border-radius: 0px;
-    height: 15px;
-    width: 15px;
-    top: -7px;
-  }
-  div:nth-child(3) {
-    top: 10px;
-    left: 0px;
-    transform: rotate(45deg);
-  }
-}
-
-
-
-//sidebar
 .sidenav {
   height: 100%;
   width: 0;
@@ -137,45 +90,51 @@ label {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #6D7993;
+  background-color: #555555;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
+  border-right: 3px dotted #fab95b;
+  }
+
+.sidenav > span .logop {
+  max-width: 100%;
 }
-.sidenav > span img {
+.sidenav > span .langue {
   max-width: 96px;
 }
+
 .sidenav a {
   padding: 8px 8px 8px 8px;
   text-decoration: none;
   font-size: 1.5em;
   color: #fab95b;
   display: block;
-  transition: 0.3s;
-}
+  transition: 0.3s; }
 
 .sidenav a:hover {
   color: #1a3163;
-  background-image: radial-gradient(circle, #fab95b,#6d7993);
-}
+  background-image: radial-gradient(circle, #fab95b, #6d7993); }
 
 .sidenav .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
-  margin-left: 50px;
-}
+  margin-left: 50px; }
 
 #main {
   transition: margin-left .5s;
-  padding: 0px;
-}
+  padding: 0px; }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+  .sidenav {
+    padding-top: 15px; }
+
+  .sidenav a {
+    font-size: 18px; } }
+
+/*# sourceMappingURL=sidebar.css.map */
